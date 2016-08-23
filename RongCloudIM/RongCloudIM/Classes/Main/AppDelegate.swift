@@ -13,9 +13,9 @@ let Token = "DsSRYMp90Czh6a71EWeLZwCwqJBZ6qdQhFCGjvPrWk36F7nMiFMAs0NvyaeMSVyroLR
 let AppKey : String = "8brlm7ufrraa3"
 
 func HHLog<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line){
-    #if DEBUG
+    //#if DEBUG
         print("\(methodName)[\(lineNumber)]:\(message)")
-    #endif
+    //#endif
 }
 
 @UIApplicationMain
@@ -40,21 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("token错误")
         })
         
-        
-        //新建一个聊天会话View Controller对象
-        let chat = RCConversationViewController()
-        //设置会话的类型，如单聊、讨论组、群聊、聊天室、客服、公众服务会话等
-        chat.conversationType = RCConversationType.ConversationType_PRIVATE
-        //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，讨论组、群聊、聊天室为会话的ID）
-        chat.targetId = "targetIdYouWillChatIn"
-        //设置聊天会话界面要显示的标题
-        chat.title = "想显示的会话标题"
-        //显示聊天会话界面
-        //self.navigationController?.pushViewController(chat, animated: true)//
-        
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         
-        window?.rootViewController = chat
+        window?.rootViewController = MainViewController()
         
         window?.makeKeyAndVisible()
         
