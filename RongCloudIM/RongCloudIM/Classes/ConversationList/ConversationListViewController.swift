@@ -28,6 +28,11 @@ class ConversationListViewController: RCConversationListViewController {
         
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
+    }
 }
 
 
@@ -35,6 +40,9 @@ extension ConversationListViewController {
     //重写RCConversationListViewController的onSelectedTableRow事件
     override func onSelectedTableRow(conversationModelType: RCConversationModelType, conversationModel model: RCConversationModel!, atIndexPath indexPath: NSIndexPath!) {
         //打开会话界面
+        
+        self.tabBarController?.tabBar.hidden = true
+        
         let chat = RCConversationViewController(conversationType: model.conversationType, targetId: model.targetId)
         chat.title = "想显示的会话标题"
         self.navigationController?.pushViewController(chat, animated: true)

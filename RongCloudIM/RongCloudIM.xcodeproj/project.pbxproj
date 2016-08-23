@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A3EF1CD1D69422900684188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CC1D69422900684188 /* Assets.xcassets */; };
 		0A3EF1D01D69422900684188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CE1D69422900684188 /* LaunchScreen.storyboard */; };
-		0A3EF1DB1D69422900684188 /* RongCloudIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EF1DA1D69422900684188 /* RongCloudIMTests.swift */; };
-		0A3EF1E61D69422900684188 /* RongCloudIMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EF1E51D69422900684188 /* RongCloudIMUITests.swift */; };
+		ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A681D6C2B7700364BDC /* NetworTools.swift */; };
 		ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */; };
 		ABFE96001D6BEB51004AAA1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FD1D6BEB51004AAA1D /* MainViewController.swift */; };
 		ABFE96081D6BEBD5004AAA1D /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE96071D6BEBD5004AAA1D /* ConversationListViewController.swift */; };
@@ -45,15 +44,12 @@
 		0A3EF1CF1D69422900684188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A3EF1D11D69422900684188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EF1D61D69422900684188 /* RongCloudIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RongCloudIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A3EF1DA1D69422900684188 /* RongCloudIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RongCloudIMTests.swift; sourceTree = "<group>"; };
-		0A3EF1DC1D69422900684188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EF1E11D69422900684188 /* RongCloudIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RongCloudIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A3EF1E51D69422900684188 /* RongCloudIMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RongCloudIMUITests.swift; sourceTree = "<group>"; };
-		0A3EF1E71D69422900684188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EF1F31D69488E00684188 /* RongCloudIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIM-Bridging-Header.h"; sourceTree = "<group>"; };
 		191A5B260F5FE30EAF7B04F2 /* Pods-RongCloudIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.release.xcconfig"; sourceTree = "<group>"; };
 		2C9BF7FA289EB497BA7085FF /* Pods_RongCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RongCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E5BAB7FBB2E5EC5C1A5DD2 /* Pods-RongCloudIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.debug.xcconfig"; sourceTree = "<group>"; };
+		ABEC0A681D6C2B7700364BDC /* NetworTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworTools.swift; sourceTree = "<group>"; };
 		ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFE95FD1D6BEB51004AAA1D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ABFE96071D6BEBD5004AAA1D /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				0A3EF1C41D69422900684188 /* RongCloudIM */,
-				0A3EF1D91D69422900684188 /* RongCloudIMTests */,
-				0A3EF1E41D69422900684188 /* RongCloudIMUITests */,
 				0A3EF1C31D69422900684188 /* Products */,
 				B0D288E15916EB452D71757A /* Pods */,
 				4931215F4E7A6E897A586F95 /* Frameworks */,
@@ -124,30 +118,20 @@
 			path = RongCloudIM;
 			sourceTree = "<group>";
 		};
-		0A3EF1D91D69422900684188 /* RongCloudIMTests */ = {
-			isa = PBXGroup;
-			children = (
-				0A3EF1DA1D69422900684188 /* RongCloudIMTests.swift */,
-				0A3EF1DC1D69422900684188 /* Info.plist */,
-			);
-			path = RongCloudIMTests;
-			sourceTree = "<group>";
-		};
-		0A3EF1E41D69422900684188 /* RongCloudIMUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0A3EF1E51D69422900684188 /* RongCloudIMUITests.swift */,
-				0A3EF1E71D69422900684188 /* Info.plist */,
-			);
-			path = RongCloudIMUITests;
-			sourceTree = "<group>";
-		};
 		4931215F4E7A6E897A586F95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2C9BF7FA289EB497BA7085FF /* Pods_RongCloudIM.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABEC0A671D6C2AF600364BDC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				ABEC0A681D6C2B7700364BDC /* NetworTools.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		ABFE95F71D6BEB51004AAA1D /* Classes */ = {
@@ -158,6 +142,7 @@
 				ABFE95F81D6BEB51004AAA1D /* Contacts */,
 				ABFE95FA1D6BEB51004AAA1D /* Discover */,
 				ABFE95FE1D6BEB51004AAA1D /* Me */,
+				ABEC0A671D6C2AF600364BDC /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -401,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFE960F1D6BEBF9004AAA1D /* MeViewController.swift in Sources */,
+				ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */,
 				ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */,
 				ABFE96081D6BEBD5004AAA1D /* ConversationListViewController.swift in Sources */,
 				ABFE96131D6BEC11004AAA1D /* DiscoverViewController.swift in Sources */,
@@ -413,7 +399,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3EF1DB1D69422900684188 /* RongCloudIMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3EF1E61D69422900684188 /* RongCloudIMUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

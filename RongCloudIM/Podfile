@@ -4,5 +4,6 @@ use_frameworks!
 target :"RongCloudIM" do
 
 pod "RongCloudIMKit"
+pod "AFNetworking"
 
 end
