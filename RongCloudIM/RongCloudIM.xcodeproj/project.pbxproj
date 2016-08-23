@@ -10,6 +10,7 @@
 		0A3EF1CD1D69422900684188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CC1D69422900684188 /* Assets.xcassets */; };
 		0A3EF1D01D69422900684188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CE1D69422900684188 /* LaunchScreen.storyboard */; };
 		ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A681D6C2B7700364BDC /* NetworTools.swift */; };
+		ABEC0A6F1D6C3DFA00364BDC /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */; };
 		ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */; };
 		ABFE96001D6BEB51004AAA1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FD1D6BEB51004AAA1D /* MainViewController.swift */; };
 		ABFE96081D6BEBD5004AAA1D /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE96071D6BEBD5004AAA1D /* ConversationListViewController.swift */; };
@@ -50,6 +51,8 @@
 		2C9BF7FA289EB497BA7085FF /* Pods_RongCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RongCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E5BAB7FBB2E5EC5C1A5DD2 /* Pods-RongCloudIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.debug.xcconfig"; sourceTree = "<group>"; };
 		ABEC0A681D6C2B7700364BDC /* NetworTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworTools.swift; sourceTree = "<group>"; };
+		ABEC0A6D1D6C3DF900364BDC /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA1.h"; sourceTree = "<group>"; };
+		ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA1.m"; sourceTree = "<group>"; };
 		ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFE95FD1D6BEB51004AAA1D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ABFE96071D6BEBD5004AAA1D /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				ABEC0A681D6C2B7700364BDC /* NetworTools.swift */,
+				ABEC0A6D1D6C3DF900364BDC /* NSString+SHA1.h */,
+				ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			files = (
 				ABFE960F1D6BEBF9004AAA1D /* MeViewController.swift in Sources */,
 				ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */,
+				ABEC0A6F1D6C3DFA00364BDC /* NSString+SHA1.m in Sources */,
 				ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */,
 				ABFE96081D6BEBD5004AAA1D /* ConversationListViewController.swift in Sources */,
 				ABFE96131D6BEC11004AAA1D /* DiscoverViewController.swift in Sources */,

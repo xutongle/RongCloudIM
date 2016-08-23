@@ -4,3 +4,4 @@
 
 
 #import <RongIMKit/RongIMKit.h>
+#import "NSString+SHA1.h"
