@@ -77,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        
+        //NSURLSession
         
         
         
