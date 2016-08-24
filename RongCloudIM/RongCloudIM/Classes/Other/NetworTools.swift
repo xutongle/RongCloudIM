@@ -6,6 +6,16 @@
 //  Copyright © 2016年 hjl. All rights reserved.
 //
 
+//
+//NetworkTools.shareInstance.request(.GET, urlString: "http://httpbin.org/get", parameters: ["name" : "why"]) { (result, error) -> () in
+//    if error != nil {
+//        print(error)
+//        return
+//    }
+//    
+//    print(result)
+//}
+
 
 import AFNetworking
 
