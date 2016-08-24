@@ -8,10 +8,9 @@
 
 import UIKit
 
-let Token = "DsSRYMp90Czh6a71EWeLZwCwqJBZ6qdQhFCGjvPrWk36F7nMiFMAs0NvyaeMSVyroLRssi9H+o7C0zvrugSosA=="
+//let Token = "DsSRYMp90Czh6a71EWeLZwCwqJBZ6qdQhFCGjvPrWk36F7nMiFMAs0NvyaeMSVyroLRssi9H+o7C0zvrugSosA=="
 
-let AppKey : String = "8brlm7ufrraa3"
-let AppSecret : String = "B4ekZUC9tP"
+
 
 func HHLog<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line){
     //#if DEBUG
@@ -23,61 +22,14 @@ func HHLog<T>(message: T, fileName: String = #file, methodName: String = #functi
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func getToken() {
-        
-        let parameters = [
-            "userId": "003",
-            "name": "003",
-            "portraitUri": ""
-        ]
-        
-        let Timestamp = String(format: "%.0f",NSDate().timeIntervalSince1970)
-        let Nonce: String = String(arc4random())
-        var sha1 = AppKey + Nonce + Timestamp
-        sha1 = (sha1 as NSString).sha1()
-
-        // 网址
-        let urlstr = "https://api.cn.rong.io/user/getToken.json"
-        let manage = NetworkTools.shareInstance
-        
-        // 键值对应
-        manage.requestSerializer.setValue(AppKey, forHTTPHeaderField: "App-Key")
-        manage.requestSerializer.setValue(AppSecret, forHTTPHeaderField: "appSecret")
-        manage.requestSerializer.setValue(Nonce, forHTTPHeaderField: "Nonce")
-        manage.requestSerializer.setValue(Timestamp, forHTTPHeaderField: "Timestamp")
-        manage.requestSerializer.setValue(sha1, forHTTPHeaderField: "Signature")
-        manage.requestSerializer.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-
-        manage.POST(urlstr, parameters: parameters, success: { (request, AnyObject) in
-            print(AnyObject)
-            }) { (request, NSError) in
-            print(NSError)
-        }
-    }
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        RCIM.sharedRCIM().initWithAppKey(AppKey)
-        
-        getToken()
-        
-        RCIM.sharedRCIM().connectWithToken(Token,
-                                           success: { (userId) -> Void in
-                                            print("登陆成功。当前登录的用户ID：\(userId)")
-            }, error: { (status) -> Void in
-                print("登陆的错误码为:\(status.rawValue)")
-            }, tokenIncorrect: {
-                //token过期或者不正确。
-                //如果设置了token有效期并且token过期，请重新请求您的服务器获取新的token
-                //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
-                print("token错误")
-        })
-        
+                
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = LoginViewController()
         
         window?.makeKeyAndVisible()
         

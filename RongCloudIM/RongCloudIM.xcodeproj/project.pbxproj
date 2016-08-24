@@ -10,6 +10,8 @@
 		0A3EF1CD1D69422900684188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CC1D69422900684188 /* Assets.xcassets */; };
 		0A3EF1D01D69422900684188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3EF1CE1D69422900684188 /* LaunchScreen.storyboard */; };
 		0AEE91171D6C94AF00391C3A /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE91161D6C94AF00391C3A /* Foundation+Log.m */; };
+		0AEE91441D6DCD0400391C3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE91421D6DCD0400391C3A /* LoginViewController.swift */; };
+		0AEE91451D6DCD0400391C3A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE91431D6DCD0400391C3A /* LoginViewController.xib */; };
 		ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A681D6C2B7700364BDC /* NetworTools.swift */; };
 		ABEC0A6F1D6C3DFA00364BDC /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */; };
 		ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */; };
@@ -49,6 +51,8 @@
 		0A3EF1E11D69422900684188 /* RongCloudIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RongCloudIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3EF1F31D69488E00684188 /* RongCloudIM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RongCloudIM-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AEE91161D6C94AF00391C3A /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		0AEE91421D6DCD0400391C3A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0AEE91431D6DCD0400391C3A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		191A5B260F5FE30EAF7B04F2 /* Pods-RongCloudIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.release.xcconfig"; sourceTree = "<group>"; };
 		2C9BF7FA289EB497BA7085FF /* Pods_RongCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RongCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E5BAB7FBB2E5EC5C1A5DD2 /* Pods-RongCloudIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = RongCloudIM;
 			sourceTree = "<group>";
 		};
+		0AEE913E1D6DCC9000391C3A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0AEE91421D6DCD0400391C3A /* LoginViewController.swift */,
+				0AEE91431D6DCD0400391C3A /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		4931215F4E7A6E897A586F95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				ABFE95FB1D6BEB51004AAA1D /* Main */,
+				0AEE913E1D6DCC9000391C3A /* Login */,
 				ABFE95F91D6BEB51004AAA1D /* ConversationList */,
 				ABFE95F81D6BEB51004AAA1D /* Contacts */,
 				ABFE95FA1D6BEB51004AAA1D /* Discover */,
@@ -317,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEE91451D6DCD0400391C3A /* LoginViewController.xib in Resources */,
 				0A3EF1D01D69422900684188 /* LaunchScreen.storyboard in Resources */,
 				ABFE96101D6BEBF9004AAA1D /* MeViewController.xib in Resources */,
 				0A3EF1CD1D69422900684188 /* Assets.xcassets in Resources */,
@@ -401,6 +416,7 @@
 				0AEE91171D6C94AF00391C3A /* Foundation+Log.m in Sources */,
 				ABFE96131D6BEC11004AAA1D /* DiscoverViewController.swift in Sources */,
 				ABFE96001D6BEB51004AAA1D /* MainViewController.swift in Sources */,
+				0AEE91441D6DCD0400391C3A /* LoginViewController.swift in Sources */,
 				ABFE96171D6BECE0004AAA1D /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
