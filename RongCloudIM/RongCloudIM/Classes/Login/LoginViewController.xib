@@ -18,37 +18,60 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fjr-96-mJ3">
-                    <rect key="frame" x="40" y="150" width="520" height="30"/>
+                    <rect key="frame" x="40" y="134" width="520" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="o08-2J-rHM"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNd-RX-3PP">
-                    <rect key="frame" x="40" y="210" width="520" height="30"/>
-                    <color key="backgroundColor" red="0.61480180369127502" green="0.57573930369127513" blue="0.57807256711409394" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="40" y="208" width="520" height="40"/>
+                    <color key="backgroundColor" red="0.60124257969999995" green="1" blue="0.33282794059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="mfF-9d-u3c"/>
+                    </constraints>
                     <state key="normal" title="登录"/>
                     <connections>
                         <action selector="LoginClick:" destination="-1" eventType="touchUpInside" id="JqV-qc-vq4"/>
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPp-jx-91r">
-                    <rect key="frame" x="40" y="90" width="520" height="30"/>
+                    <rect key="frame" x="40" y="90" width="520" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="cPo-9s-6Jo"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3T-Ad-0wM">
+                    <rect key="frame" x="40" y="268" width="520" height="40"/>
+                    <color key="backgroundColor" red="0.60124257969999995" green="1" blue="0.33282794059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="C47-Jb-F3G"/>
+                    </constraints>
+                    <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="RegisterClick:" destination="-1" eventType="touchUpInside" id="xqw-fe-sOs"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fPp-jx-91r" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="2DL-Ja-fW6"/>
                 <constraint firstAttribute="trailing" secondItem="fPp-jx-91r" secondAttribute="trailing" constant="40" id="2vL-Qy-ZWP"/>
-                <constraint firstItem="lNd-RX-3PP" firstAttribute="top" secondItem="Fjr-96-mJ3" secondAttribute="bottom" constant="30" id="3no-Tb-2BC"/>
-                <constraint firstItem="lNd-RX-3PP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="LpH-Mh-2Ac"/>
+                <constraint firstAttribute="trailing" secondItem="lNd-RX-3PP" secondAttribute="trailing" constant="40" id="889-eo-eoL"/>
+                <constraint firstAttribute="trailing" secondItem="y3T-Ad-0wM" secondAttribute="trailing" constant="40" id="AH9-Js-Vxb"/>
+                <constraint firstItem="lNd-RX-3PP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="C2y-3z-GQR"/>
                 <constraint firstAttribute="trailing" secondItem="Fjr-96-mJ3" secondAttribute="trailing" constant="40" id="UWv-Gv-SGi"/>
-                <constraint firstAttribute="trailing" secondItem="lNd-RX-3PP" secondAttribute="trailing" constant="40" id="jCx-iJ-zJl"/>
-                <constraint firstItem="Fjr-96-mJ3" firstAttribute="top" secondItem="fPp-jx-91r" secondAttribute="bottom" constant="30" id="peU-d2-F52"/>
+                <constraint firstItem="y3T-Ad-0wM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="eCq-tp-CSo"/>
+                <constraint firstItem="lNd-RX-3PP" firstAttribute="top" secondItem="Fjr-96-mJ3" secondAttribute="bottom" constant="30" id="g6L-VA-Nkn"/>
+                <constraint firstItem="y3T-Ad-0wM" firstAttribute="top" secondItem="lNd-RX-3PP" secondAttribute="bottom" constant="20" id="p84-ll-5mR"/>
+                <constraint firstItem="Fjr-96-mJ3" firstAttribute="top" secondItem="fPp-jx-91r" secondAttribute="bottom" id="peU-d2-F52"/>
                 <constraint firstItem="Fjr-96-mJ3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="pt0-AZ-BEr"/>
                 <constraint firstItem="fPp-jx-91r" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="qJk-9X-wlQ"/>
             </constraints>
-            <point key="canvasLocation" x="243" y="285"/>
+            <point key="canvasLocation" x="437" y="280"/>
         </view>
     </objects>
 </document>

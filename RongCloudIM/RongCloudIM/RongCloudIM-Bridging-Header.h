@@ -5,3 +5,4 @@
 
 #import <RongIMKit/RongIMKit.h>
 #import "NSString+SHA1.h"
+#import <BmobSDK/Bmob.h>

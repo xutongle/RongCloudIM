@@ -18,12 +18,53 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginClick(sender: AnyObject) {
         
-        let parameters = [
-                    "userId": userTextField.text!,
-                    "name": pwdTextField.text!,
-                    "portraitUri": ""
-                ]
+        // 获取token
+        
+        
+       // BmobUser.loginWithUsernameInBackground("001", password: "001")
+        
+        BmobUser.loginWithUsernameInBackground(self.userTextField.text, password: self.pwdTextField.text) { (bUser, error) in
+            HHLog(bUser)
+            if error != nil {
+                HHLog(error)
+            }
+            self.getTokenWithBmobUser(bUser.username)
+        }
+        
+    }
+    
+    @IBAction func RegisterClick(sender: AnyObject) {
+        
+        let bUser = BmobUser()
+        bUser.username = self.userTextField.text
+        bUser.password = self.pwdTextField.text
 
+        bUser.signUpInBackgroundWithBlock { (isSuccessful, error) in
+            
+            if isSuccessful {
+                bUser.updateInBackground()
+                
+                print("注册成功")
+            }else{
+                print("注册失败 = \(error)")
+            }
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+}
+
+
+extension LoginViewController {
+    func getTokenWithBmobUser(bmobUser: String)  -> String {
+        let parameters = [
+            "userId": bmobUser,
+            "name": bmobUser,
+            "portraitUri": ""
+        ]
         
         let Timestamp = String(format: "%.0f",NSDate().timeIntervalSince1970)
         let Nonce: String = String(arc4random())
@@ -48,39 +89,38 @@ class LoginViewController: UIViewController {
             let too : NSDictionary = AnyObject as! NSDictionary
             
             Token = too["token"] as! String
-            //print(Token)
             HHLog("token = " + Token)
-            RCIM.sharedRCIM().initWithAppKey(AppKey)
             
-            RCIM.sharedRCIM().connectWithToken(Token,
-                success: { (userId) -> Void in
-                    print("登陆成功。当前登录的用户ID：\(userId)")
-                    
-                    //UIApplication.sharedApplication().keyWindow?.rootViewController = MainViewController()
-                    
-                    
-                }, error: { (status) -> Void in
-                    print("登陆的错误码为:\(status.rawValue)")
-                }, tokenIncorrect: {
-                    //token过期或者不正确。
-                    //如果设置了token有效期并且token过期，请重新请求您的服务器获取新的token
-                    //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
-                    print("token错误")
-            })
-            
+            // 用token登录上线
+            self.loginWithToken(Token)
             
         }) { (request, NSError) in
             print(NSError)
         }
-        
-        
-
+        return Token
     }
     
+    func loginWithToken(token : String) {
+        RCIM.sharedRCIM().initWithAppKey(AppKey)
+        
+        RCIM.sharedRCIM().connectWithToken(token,
+                                           success: { (userId) -> Void in
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+                print("登陆成功。当前登录的用户ID：\(userId)")
+                                            
+                // 换根控制器失败, 原因:此处不是主线程, 换控制器操作, 必须在主线程操作
+                dispatch_sync(dispatch_get_main_queue(), { 
+                    UIApplication.sharedApplication().keyWindow?.rootViewController = MainViewController()
+                })
+                                            
+            }, error: { (status) -> Void in
+                print("登陆的错误码为:\(status.rawValue)")
+            }, tokenIncorrect: {
+                //token过期或者不正确。
+                //如果设置了token有效期并且token过期，请重新请求您的服务器获取新的token
+                //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
+                print("token错误")
+        })
     }
 }
+

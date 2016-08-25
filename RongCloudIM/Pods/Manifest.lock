@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BmobSDK (1.7.2)
   - RongCloudIMKit (2.7.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - BmobSDK
   - RongCloudIMKit
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   RongCloudIMKit: 2602b151b0411b28c1c371155e1b24d9dfc08d51
 
-PODFILE CHECKSUM: 4d840852985943d30853e6b2be95ad4f36d79431
+PODFILE CHECKSUM: c484205d793fcdccb2d9652e764239b47c7a05e4
 
 COCOAPODS: 1.0.1

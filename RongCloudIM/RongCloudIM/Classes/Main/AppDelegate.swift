@@ -8,10 +8,6 @@
 
 import UIKit
 
-//let Token = "DsSRYMp90Czh6a71EWeLZwCwqJBZ6qdQhFCGjvPrWk36F7nMiFMAs0NvyaeMSVyroLRssi9H+o7C0zvrugSosA=="
-
-
-
 func HHLog<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line){
     //#if DEBUG
         print("\(methodName)[\(lineNumber)]:\(message)")
@@ -26,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        Bmob.registerWithAppKey("7bf9d5efa62d37683d69b07b64e694a1")
+
                 
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         
