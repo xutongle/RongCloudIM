@@ -14,6 +14,47 @@ class ContactsViewController: UITableViewController {
         super.viewDidLoad()
 
         setupNav()
+        
+        
+        let bUser = BmobUser.getCurrentUser()
+
+        let query   = BmobQuery(className: "Friends")
+
+        query.whereObjectKey("friends", relatedTo: bUser)
+        
+        query.findObjectsInBackgroundWithBlock { (array, error) in
+            
+            for a in array {
+                
+                HHLog(a)
+                
+                let t  = a.objectForKey("userID") as! String
+                
+                HHLog("username \(t)")
+            }
+        }
+        
+    
+        
+        
+//        //关联对象表, 要查询的对象其实就是一个likeBooks表
+//        BmobQuery *bquery = [BmobQuery queryWithClassName:@"likeBooks"];
+//        [bquery orderByDescending:@"updatedAt"];
+//        
+//        bquery.limit = 20;
+//        
+//        //需要查询的列, 获取当前用户, 查询当前用户的likes值
+//        //获取要添加关联关系的用户
+//        BmobUser *bUser = [BmobUser getCurrentUser];
+//        if (!bUser) {
+//            return;
+//        }
+//        
+//        [bquery whereObjectKey:@"likes" relatedTo:bUser];
+//        
+//        [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -23,12 +64,17 @@ class ContactsViewController: UITableViewController {
     }
     
     func setupNav() {
-        let item = UIBarButtonItem.init(title: "会话", style: .Done, target: self, action: #selector(ContactsViewController.rightBarButtonItemClick))
+        let leftItem = UIBarButtonItem.init(title: "会话", style: .Done, target: self, action: #selector(ContactsViewController.leftBarButtonItemClick))
         
-        navigationItem.rightBarButtonItem = item
+        navigationItem.leftBarButtonItem = leftItem
+        
+        
+        let rightItem = UIBarButtonItem.init(title: "加好友", style: .Done, target: self, action: #selector(ContactsViewController.rightBarButtonItemClick))
+        
+        navigationItem.rightBarButtonItem = rightItem
     }
     
-    func rightBarButtonItemClick() {
+    func leftBarButtonItemClick() {
         
         self.tabBarController?.tabBar.hidden = true
         
@@ -37,11 +83,17 @@ class ContactsViewController: UITableViewController {
         //设置会话的类型，如单聊、讨论组、群聊、聊天室、客服、公众服务会话等
         chat.conversationType = RCConversationType.ConversationType_PRIVATE
         //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，讨论组、群聊、聊天室为会话的ID）
-        chat.targetId = "005"
+        chat.targetId = "001"
         //设置聊天会话界面要显示的标题
         chat.title = "想显示的会话标题"
         //显示聊天会话界面
         self.navigationController?.pushViewController(chat, animated: true)
+    }
+    
+    func rightBarButtonItemClick() {
+        
+        navigationController?.pushViewController(AddFriendViewController(), animated: true)
+        
     }
 
 }

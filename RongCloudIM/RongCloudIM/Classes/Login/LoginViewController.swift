@@ -18,16 +18,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func LoginClick(sender: AnyObject) {
         
-        // 获取token
-        
-        
-       // BmobUser.loginWithUsernameInBackground("001", password: "001")
-        
         BmobUser.loginWithUsernameInBackground(self.userTextField.text, password: self.pwdTextField.text) { (bUser, error) in
             HHLog(bUser)
             if error != nil {
                 HHLog(error)
             }
+            // 用user获取token, 并登录
             self.getTokenWithBmobUser(bUser.username)
         }
         
@@ -59,6 +55,7 @@ class LoginViewController: UIViewController {
 
 
 extension LoginViewController {
+    
     func getTokenWithBmobUser(bmobUser: String)  -> String {
         let parameters = [
             "userId": bmobUser,

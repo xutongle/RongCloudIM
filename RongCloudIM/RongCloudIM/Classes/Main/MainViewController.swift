@@ -28,6 +28,8 @@ extension MainViewController {
         
         let nav = UINavigationController.init(rootViewController: childController)
         
+        nav.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        
         addChildViewController(nav)
         
     }

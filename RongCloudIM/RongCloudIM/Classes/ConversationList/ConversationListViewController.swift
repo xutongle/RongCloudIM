@@ -24,7 +24,7 @@ class ConversationListViewController: RCConversationListViewController {
         self.setCollectionConversationType([RCConversationType.ConversationType_DISCUSSION.rawValue,
             RCConversationType.ConversationType_GROUP.rawValue])
         
-        //self.tableview.headerview = UIView()
+
         
         
     }
@@ -37,6 +37,7 @@ class ConversationListViewController: RCConversationListViewController {
 
 
 extension ConversationListViewController {
+    
     //重写RCConversationListViewController的onSelectedTableRow事件
     override func onSelectedTableRow(conversationModelType: RCConversationModelType, conversationModel model: RCConversationModel!, atIndexPath indexPath: NSIndexPath!) {
         //打开会话界面

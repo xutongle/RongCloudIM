@@ -12,6 +12,8 @@
 		0AEE91171D6C94AF00391C3A /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE91161D6C94AF00391C3A /* Foundation+Log.m */; };
 		0AEE91441D6DCD0400391C3A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE91421D6DCD0400391C3A /* LoginViewController.swift */; };
 		0AEE91451D6DCD0400391C3A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AEE91431D6DCD0400391C3A /* LoginViewController.xib */; };
+		AB08D5711D6E9F07008B19DC /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB08D56F1D6E9F07008B19DC /* AddFriendViewController.swift */; };
+		AB08D5721D6E9F07008B19DC /* AddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB08D5701D6E9F07008B19DC /* AddFriendViewController.xib */; };
 		ABEC0A691D6C2B7700364BDC /* NetworTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A681D6C2B7700364BDC /* NetworTools.swift */; };
 		ABEC0A6F1D6C3DFA00364BDC /* NSString+SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */; };
 		ABFE95FF1D6BEB51004AAA1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE95FC1D6BEB51004AAA1D /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		191A5B260F5FE30EAF7B04F2 /* Pods-RongCloudIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.release.xcconfig"; sourceTree = "<group>"; };
 		2C9BF7FA289EB497BA7085FF /* Pods_RongCloudIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RongCloudIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E5BAB7FBB2E5EC5C1A5DD2 /* Pods-RongCloudIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudIM/Pods-RongCloudIM.debug.xcconfig"; sourceTree = "<group>"; };
+		AB08D56F1D6E9F07008B19DC /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		AB08D5701D6E9F07008B19DC /* AddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendViewController.xib; sourceTree = "<group>"; };
 		ABEC0A681D6C2B7700364BDC /* NetworTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworTools.swift; sourceTree = "<group>"; };
 		ABEC0A6D1D6C3DF900364BDC /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA1.h"; sourceTree = "<group>"; };
 		ABEC0A6E1D6C3DF900364BDC /* NSString+SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SHA1.m"; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				ABFE96151D6BECE0004AAA1D /* ContactsViewController.swift */,
+				AB08D56F1D6E9F07008B19DC /* AddFriendViewController.swift */,
+				AB08D5701D6E9F07008B19DC /* AddFriendViewController.xib */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB08D5721D6E9F07008B19DC /* AddFriendViewController.xib in Resources */,
 				0AEE91451D6DCD0400391C3A /* LoginViewController.xib in Resources */,
 				0A3EF1D01D69422900684188 /* LaunchScreen.storyboard in Resources */,
 				ABFE96101D6BEBF9004AAA1D /* MeViewController.xib in Resources */,
@@ -416,6 +423,7 @@
 				0AEE91171D6C94AF00391C3A /* Foundation+Log.m in Sources */,
 				ABFE96131D6BEC11004AAA1D /* DiscoverViewController.swift in Sources */,
 				ABFE96001D6BEB51004AAA1D /* MainViewController.swift in Sources */,
+				AB08D5711D6E9F07008B19DC /* AddFriendViewController.swift in Sources */,
 				0AEE91441D6DCD0400391C3A /* LoginViewController.swift in Sources */,
 				ABFE96171D6BECE0004AAA1D /* ContactsViewController.swift in Sources */,
 			);
