@@ -54,23 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }) { (request, NSError) in
             print(NSError)
         }
-        
-        
-        //NSURLSession
-        
-        
-        
-        
-        
-//        [manager POST:str parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"responseObject:%@",responseObject);
-//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@",error);
-//        }];
-        
-    
-        
-        
     }
     
     
