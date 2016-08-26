@@ -18,7 +18,6 @@ class AddFriendViewController: UIViewController {
         self.addButton.enabled = false
         
         // 数据关联
-//        BmobUser *bUser = [BmobUser getCurrentUser];
         let bUser = BmobUser.getCurrentUser()
         
         if (bUser != nil) {
@@ -47,7 +46,6 @@ class AddFriendViewController: UIViewController {
             })
 
         }
-        
     }
     @IBAction func queryClick(sender: AnyObject) {
         

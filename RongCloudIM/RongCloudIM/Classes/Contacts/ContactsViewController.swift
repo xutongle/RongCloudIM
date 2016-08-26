@@ -9,13 +9,15 @@
 import UIKit
 
 class ContactsViewController: UITableViewController {
-        
+    
+    var userIdArr = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNav()
         
-        
+        // 查询
         let bUser = BmobUser.getCurrentUser()
 
         let query   = BmobQuery(className: "Friends")
@@ -26,36 +28,24 @@ class ContactsViewController: UITableViewController {
             
             for a in array {
                 
-                HHLog(a)
+                //HHLog(a)
                 
                 let t  = a.objectForKey("userID") as! String
                 
                 HHLog("username \(t)")
+                
+                self.userIdArr.append(t)
+                
             }
-        }
-        
-    
-        
-        
-//        //关联对象表, 要查询的对象其实就是一个likeBooks表
-//        BmobQuery *bquery = [BmobQuery queryWithClassName:@"likeBooks"];
-//        [bquery orderByDescending:@"updatedAt"];
-//        
-//        bquery.limit = 20;
-//        
-//        //需要查询的列, 获取当前用户, 查询当前用户的likes值
-//        //获取要添加关联关系的用户
-//        BmobUser *bUser = [BmobUser getCurrentUser];
-//        if (!bUser) {
-//            return;
-//        }
-//        
-//        [bquery whereObjectKey:@"likes" relatedTo:bUser];
-//        
-//        [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-        
-        
+            HHLog(self.userIdArr)
+            
+            self.tableView.reloadData()
+        }      
     }
+
+    
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -102,22 +92,41 @@ class ContactsViewController: UITableViewController {
 extension ContactsViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+        return self.userIdArr.count
     }
     
-    /*
+    
      override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
+        
+        let cell = UITableViewCell.init(style: .Default, reuseIdentifier: "reuseIdentifier")
+        
+        cell.textLabel?.text = self.userIdArr[indexPath.row]
+        
+        return cell
+        
      }
-     */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.tabBarController?.tabBar.hidden = true
+        
+        //新建一个聊天会话View Controller对象
+        let chat = RCConversationViewController()
+        //设置会话的类型，如单聊、讨论组、群聊、聊天室、客服、公众服务会话等
+        chat.conversationType = RCConversationType.ConversationType_PRIVATE
+        //设置会话的目标会话ID。（单聊、客服、公众服务会话为对方的ID，讨论组、群聊、聊天室为会话的ID）
+        chat.targetId = userIdArr[indexPath.row]
+        //设置聊天会话界面要显示的标题
+        chat.title = userIdArr[indexPath.row]
+        //显示聊天会话界面
+        self.navigationController?.pushViewController(chat, animated: true)
+        
+    }
+    
 }
